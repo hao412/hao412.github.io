@@ -1,0 +1,80 @@
+<style>
+body {
+  font-family: '맑은 고딕', Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+h2 {
+  color: #e74c3c;
+  margin-top: 30px;
+}
+p {
+  line-height: 1.6;
+  color: #34495e;
+}
+ul {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+li {
+  margin: 10px 0;
+  padding: 5px;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나만의 자기소개 페이지</title>
+</head>
+<body>
+  <h1>안녕하세요! 저는 [이름]입니다</h1>
+  <h2>자기소개</h2>
+  <p>저는 [직업/나이]이고, [취미]를 좋아합니다.</p>
+  <h2>좋아하는 것들</h2>
+  <ul>
+    <li>음식: [좋아하는 음식]</li>
+    <li>영화: [좋아하는 영화]</li>
+    <li>장소: [좋아하는 장소]</li>
+  </ul>
+  <h2>연락처</h2>
+  <p>이메일: [이메일 주소]</p>
+  <p>취미 블로그: <a href="https://blog.naver.com">내 블로그</a></p>
+  
+  <!-- 버튼 추가 -->
+	<button onclick="showGreeting()">인사하기</button>
+	<button onclick="changeColor()">제목 색깔 바꾸기</button>
+</body>
+</html>
+
+<script>
+function showGreeting() {
+  const name = prompt("당신의 이름을 알려주세요!");
+  if (name) {
+    alert("안녕하세요, " + name + "님! 제 페이지에 오신 것을 환영합니다!");
+  }
+}
+function changeColor() {
+  const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.querySelector('h1').style.color = randomColor;
+}
+</script>
